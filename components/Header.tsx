@@ -20,7 +20,7 @@ export default function Header(){
         header-shadow">
             <h1 className="flex items-center text-2xl mt-3"><Leaf weight="fill" color="white" />BioQuizz</h1>
       
-            <div className="flex items-center justify-around w-full mt-6">
+            <div className="flex items-center justify-around w-full my-3">
                 {router.asPath === '/quizz/anfibios' && <Link href={"/"} className="flex items-center gap-x-1">
                     <House size={24} color="#fafafa" weight="fill" />
                     Início

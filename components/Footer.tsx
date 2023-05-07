@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer(){
     return (
-        <div className="fixed bottom-0 text-[14px]  text-slate-600 text-center w-full ">Feito por <Link className="underline " href={"https://github.com/samervalente"}>Samer Valente
-        <OpenInNewOffIcon sx={{fontSize:12}} />
+        <div className="text-[14px] md:absolute md:bottom-0 mt-5 md:mb-3 text-slate-600 text-center w-full ">By <Link className="underline" href={"https://github.com/samervalente"}>Samer Valente
+        <OpenInNewOffIcon sx={{fontSize:12, ml:0.5}} />
         </Link></div>
     )
 }

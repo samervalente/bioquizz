@@ -2,6 +2,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Link from "next/link";
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { yellow } from '@mui/material/colors';
+import Footer from './Footer';
 
 
 export default function Result({ answers }: any) {
@@ -23,7 +24,8 @@ export default function Result({ answers }: any) {
     }
 
     return (
-        <div className="flex flex-col">
+      <>
+          <div className="flex flex-col ">
             <h4 className="my-3 font-medium text-slate-600">Seu resultado</h4>
             <div className="w-[90vw] relative h-[200px] bg-green-500 md:w-[50vw] p-2  rounded-lg">
                 <h3 className="text-white font-bold">Nome do Quizz</h3>
@@ -60,6 +62,9 @@ export default function Result({ answers }: any) {
                 <Link className="bg-green-600 mt-3 text-white rounded-md p-3 text-center w-full md:w-[30vw] lg:w-[20vw]" href={'/'}>Voltar para o início</Link>
 
             </div>
+           
         </div>
+         <Footer />
+      </>
     )
 }
