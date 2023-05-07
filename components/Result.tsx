@@ -31,7 +31,7 @@ export default function Result({ answers }: any) {
 
                 <div className="absolute flex items-center justify-center gap-x-3 bottom-0 text-bold left-[50%] w-[80%] translate-x-[-50%] h-[60%] bg-white rounded-t-lg p-3">
                     <div style={{ width: 100, height: 100 }} className="relative">
-                        <text className="absolute top-[30%] left-[32%] md:top-[38%] md:left-[36%]">{answers.filter((answer: any) => answer.selectedAlternative === answer.correctAlternative).length}/{answers.length}</text>
+                        <text className="absolute top-[50%] translate-y-[-50%] left-[32%]">{answers.filter((answer: any) => answer.selectedAlternative === answer.correctAlternative).length}/{answers.length}</text>
                         <CircularProgressbar className="text-bold text-center" value={answers.filter((answer: any) => answer.selectedAlternative === answer.correctAlternative).length * 10} styles={buildStyles({
                             trailColor: 'red',
                             pathColor: `#22C55E`,

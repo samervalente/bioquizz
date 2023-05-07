@@ -8,6 +8,7 @@ import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 import { orange } from '@mui/material/colors';
 
 
+
 interface InGameQuestion extends Question {
     selectedAlternative?: number | null;
     isAnswered: boolean
@@ -114,8 +115,7 @@ export default function AnfiQuizz() {
     return (
         <>
             <Header />
-
-            <main className="flex flex-col items-center  p-3 ">
+            <main className="flex flex-col items-center p-3">
                 <div className="flex flex-col md:w-[50vw] items-center gap-y-4 justify-between">
                     {state.activeQuestionIndex === questions.length ?
                         <Result answers={state.answers} /> :
@@ -163,6 +163,7 @@ export default function AnfiQuizz() {
                         </>}
                 </div>
             </main>
+
         </>
     )
 }
