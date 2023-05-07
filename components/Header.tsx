@@ -2,6 +2,7 @@ import { House, Leaf } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import OpenInNewOffIcon from '@mui/icons-material/OpenInNewOff';
 
 export default function Header(){
     const router = useRouter()
@@ -15,10 +16,13 @@ export default function Header(){
     },[])
 
     return (
-        <div className="bg-green-500 flex flex-col  items-center justify-around p-3 text-white font-bold 
+        <div className="bg-green-500 flex flex-col items-center justify-around text-white font-bold 
         header-shadow">
-            <h1 className="flex items-center text-2xl my-4"><Leaf weight="fill" color="white" />BioQuizz</h1>
-            <div className="flex items-center justify-around w-full">
+            <h1 className="flex items-center text-2xl mt-3"><Leaf weight="fill" color="white" />BioQuizz</h1>
+            <span>Feito por <Link className="underline" href={"https://github.com/samervalente"}>Samer Valente
+            <OpenInNewOffIcon sx={{fontSize:20}} />
+            </Link></span>
+            <div className="flex items-center justify-around w-full mt-6">
                 {router.asPath === '/quizz/anfibios' && <Link href={"/"} className="flex items-center gap-x-1">
                     <House size={24} color="#fafafa" weight="fill" />
                     Início

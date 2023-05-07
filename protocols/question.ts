@@ -5,6 +5,8 @@ export interface Question {
     title: string;
     imageUrl?:string;
     alternatives: string[];
-    correctAlternative: number;
+    correctAlternative: number | null;
+    referenceAlternativeTitle?:string;
+    reference?: Question
     // level: "Fácil" | "Média" | "Difícil";
 }

@@ -11,7 +11,6 @@ export const questions: Question[] = [
     {
         id:2,
         title: 'Quais são os animais que fazem parte do grupo dos anfíbios?',
-        imageUrl: 'https://png.pngtree.com/element_our/20190604/ourlarge/pngtree-green-animal-frog-image_1473867.jpg',
         alternatives:[ "Sapo, salamandra e cecília ", "Sapo, lagartixa e cecília", "Sapo, cobra e salamandra" ],
         correctAlternative: 0,
         
@@ -35,7 +34,7 @@ export const questions: Question[] = [
         
     },   {
         id:6,
-        title: 'Quais dos represententes do grupo anfíbia que possuem escamas internas?',
+        title: 'Quais dos representantes do grupo anfíbia que possuem escamas internas?',
         alternatives:[ "Sapos", "Pererecas", "Oxalote", "Salamandras", "Cecília" ],
         correctAlternative: 4,
         
@@ -68,6 +67,20 @@ export const questions: Question[] = [
         title: 'Qual é o órgão de copula das cecílias?',
         alternatives:[ "Clasper", "Protração", "Falodeu " ],
         correctAlternative: 2,
-        
+    },
+    {
+        id:12,
+        title: 'Essa é difícil... ache o anuro! Achou?',
+        alternatives:['Sim!', 'Não!'],
+        imageUrl: '/find.jpeg',
+        correctAlternative: null,
+        reference: {
+            id: 13, 
+            title: 'Bem aqui!! Agora me diga, qual é o nome dado a esse tipo de estratégia no qual o animal usa a sua própria coloração para se camuflar no ambiente?',
+            alternatives:['Coloração críptica', 'Coloração aposemática', 'Coloração estratégica'],
+            imageUrl: '/founded.jpeg',
+            referenceAlternativeTitle:'Qual é o nome dado a esse tipo de estratégia no qual o animal usa a sua própria coloração para se camuflar no ambiente?',
+            correctAlternative: 0
+        }
     }
 ]
