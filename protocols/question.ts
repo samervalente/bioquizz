@@ -3,7 +3,7 @@
 export interface Question {
     id:number;
     title: string;
-    imageUrl?:string;
+    imageUrl:string;
     alternatives: string[];
     correctAlternative: number | null;
     referenceAlternativeTitle?:string;

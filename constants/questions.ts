@@ -1,6 +1,6 @@
 import { Question } from "@/protocols/question";
 
-export const questions: Question[] | any[] = [
+export const questions: Question[] = [
   {
     id: 1,
     title: "Qual anfíbio não tem cauda na fase adulta?",
