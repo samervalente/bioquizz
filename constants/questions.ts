@@ -5,13 +5,13 @@ export const questions: Question[] = [
     id: 1,
     title: "Qual anfíbio não tem cauda na fase adulta?",
     alternatives: ["Sapo ", "Salamandra", "Cecília"],
-    imageUrl:'https://thumbs.dreamstime.com/b/salamander-de-inc%C3%AAndio-salamandra-do-131676373.jpg',
+    imageUrl:'/01.jpg',
     correctAlternative: 0,
   },
   {
     id: 2,
     title: "Quais são os animais que fazem parte do grupo dos anfíbios?",
-    imageUrl:'https://1.bp.blogspot.com/-nq_CP2eMyO4/UE6Z5mMwvOI/AAAAAAAAAQ8/avx93VfHtRQ/s1600/anfibios.png',
+    imageUrl:'/02.png',
     alternatives: [
       "Sapo, salamandra e cecília ",
       "Sapo, lagartixa e cecília",
@@ -21,7 +21,7 @@ export const questions: Question[] = [
   },
   {
     id: 3,
-    imageUrl:'https://thumbs.dreamstime.com/b/alimenta%C3%A7%C3%A3o-dos-anf%C3%ADbios-48493892.jpg',
+    imageUrl:'/03.jpg',
     title: "Acerca da alimentação, a maiorida dos anfíbios são:",
     alternatives: ["Herbivoros", "Carnívoros ", "Onívoro"],
     correctAlternative: 1,
@@ -29,7 +29,7 @@ export const questions: Question[] = [
   {
     id: 4,
     title: "As salamandras fazem parte de que grupo?",
-    imageUrl:'https://www.pngmart.com/files/3/Salamander-PNG-Photos.png',
+    imageUrl:'/04.png',
     alternatives: [
       "Anura ou salientia",
       "Urodela ou caudata ",
@@ -45,7 +45,7 @@ export const questions: Question[] = [
       "Urodela ou caudata",
       "Anura ou salientia",
     ],
-    imageUrl:'https://s3.static.brasilescola.uol.com.br/img/2017/11/cecilia.jpg',
+    imageUrl:'/05.png',
     correctAlternative: 0,
   },
   {
@@ -53,7 +53,7 @@ export const questions: Question[] = [
     title:
       "Quais dos representantes do grupo anfíbia que possuem escamas internas?",
     alternatives: ["Sapos", "Pererecas", "Oxalote", "Salamandras", "Cecília"],
-    imageUrl:'https://images.vexels.com/media/users/3/213078/isolated/preview/9264b4d5937dea72c74373c802094ce2-axolotl-fofo-colorido.png',
+    imageUrl:'/06.png',
     correctAlternative: 4,
   },
   {
@@ -63,7 +63,7 @@ export const questions: Question[] = [
       "Pele úmida, herbívoros, presença de pernas posteriores maiores",
       "Pele úmida, respiração cutânea e carnívoros  ",
     ],
-    imageUrl:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Amphibians.png/1200px-Amphibians.png',
+    imageUrl:'/07.png',
     correctAlternative: 1,
   },
   {
@@ -75,14 +75,14 @@ export const questions: Question[] = [
       "Coloração aposemática",
       "Coloração críptica ",
     ],
-    imageUrl:'https://midias.correiobraziliense.com.br/_midias/png/2022/08/17/675x450/1_low_res_rhacophorus_omeimontis__photo_by_chuan_chen__jpg-26251268.png?20220817172718?20220817172718',
+    imageUrl:'/08.png',
     correctAlternative: 2,
   },
   {
     id: 9,
     title: "Os anfíbios atuais fazem parte dos Lissamphybia?",
     alternatives: ["Falso", "Verdadeiro "],
-    imageUrl:'/lissamphibia.png',
+    imageUrl:'/09.png',
     correctAlternative: 1,
   },
   {
@@ -94,14 +94,14 @@ export const questions: Question[] = [
       "Presença de dentes",
       "Tentáculos quimiossensoriais ",
     ],
-    imageUrl:'https://www.elcolombiano.com/documents/10157/0/768x511/0c0/0d0/none/11101/LKLV/image_content_34654225_20191120192534.jpg',
+    imageUrl:'/10.jpg',
     correctAlternative: 2,
   },
   {
     id: 11,
     title: "Qual é o órgão de copula das cecílias?",
     alternatives: ["Clasper", "Protração", "Falodeu "],
-    imageUrl:'/cecilia_11.jpg',
+    imageUrl:'/11.jpg',
     correctAlternative: 2,
   },
   {

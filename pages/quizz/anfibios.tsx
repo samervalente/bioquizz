@@ -157,13 +157,14 @@ export default function AnfiQuizz() {
 
                             {remainingTimeControl === 0 ?
                                 <div className=" flex justify-center">
-                                    {activeQuestion?.isAnswered && <button onClick={handleNextQuestion} className={`  bg-slate-600  w-full md:w-[20vw] rounded-md p-2 text-white`}>Próxima</button>}
-                                </div> : <>
-                                <h3 className="text-md text-slate-900 text-justify">{activeQuestion?.title}</h3>
-                                    <Image width={160} height={180} alt="anphibious_image" src={activeQuestion?.imageUrl ?? '#'} className="w-full object-contain md:w-[50%] h-[200px] " />
+                                    {activeQuestion?.isAnswered && <button onClick={handleNextQuestion} className={`bg-slate-600  w-full md:w-[20vw] rounded-md p-2 text-white`}>Próxima</button>}
+                                </div> : activeQuestion ? 
+                                <>
+                                     <h3 className="text-md text-slate-900 text-justify">{activeQuestion.title}</h3>
+                                    <Image width={160} height={180} alt="anphibious_image" src={activeQuestion.imageUrl} className="w-full object-contain md:w-[50%] h-[200px] " />
                                   
                                     <div className='flex flex-col mb-8 gap-y-3 w-full md:w-[60vw] lg:w-[30vw] '>
-                                        {state.activeQuestionIndex !== questions.length && activeQuestion?.alternatives.map((alternative, alternativeIndex) => (
+                                        {state.activeQuestionIndex !== questions.length && activeQuestion.alternatives.map((alternative, alternativeIndex) => (
                                             <div key={alternative} onClick={() => answerQuestion(alternativeIndex)} className={`border 
                                                  cursor-pointer
                                                  ${activeQuestion.isAnswered ? alternativeIndex === activeQuestion.correctAlternative ? 'bg-green-500 text-white' : alternativeIndex === activeQuestion.selectedAlternative ? 'bg-red-500 text-white' : 'bg-white opacity-30 text-slate-900' : 'bg-white'} rounded-lg border-gray-300 p-3 `}>
@@ -176,7 +177,9 @@ export default function AnfiQuizz() {
                                             {activeQuestion?.isAnswered && <button onClick={handleNextQuestion} className={`  bg-slate-600  w-full md:w-[20vw] rounded-md p-2 text-white`}>Próxima</button>}
                                         </div>
                                     </div>
-                                </>}
+                                 </>
+                                : ''
+                                }
                         </>}
                 </div>
             </main>
