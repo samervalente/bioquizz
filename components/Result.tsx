@@ -2,23 +2,20 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import Link from "next/link";
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import { yellow } from '@mui/material/colors';
-import Footer from './Footer';
-
 
 export default function Result({ answers }: any) {
     console.log(answers)
     function renderResult() {
         return answers.map((answer: any, i: number) => {
             const isCorrectAnswer = answer.selectedAlternative === answer.correctAlternative
-            return <div key={answer.id} className={`flex flex-col gap-x-3 p-2`}>
-                    <div className='flex items-center gap-x-3'>
-                        <span className={`${isCorrectAnswer ? 'bg-green-500': 'bg-red-500'} text-white h-[10px] p-4 flex items-center justify-center w-[10px] rounded-full`}>{i + 1}</span>
-                        <span className="text-slate-600 font-medium w-[90%] text-md text-justify ">{answer.referenceAlternativeTitle ?? answer.title}</span>
-                    </div>
-                    {answer.selectedAlternative === null ? <span className="mt-3 text-orange-600 text-justify">Não respondeu a tempo</span> : 
-                    !isCorrectAnswer ? <span className="mt-3 text-gray-600 text-justify">Sua resposta: {answer.alternatives[answer.selectedAlternative]}</span> : ''}
-
-                    <span className="mt-3 text-gray-600">Resposta: {answer.alternatives[answer.correctAlternative]}</span>
+            return <div key={answer.id} className={`flex gap-x-3 p-2 border-dashed border-b-2 border-gray-300`}>
+                 <span className={` ${isCorrectAnswer ? 'bg-green-500': 'bg-red-500'} text-white h-[10px] p-4 flex items-center justify-center w-[10px] rounded-full mb-3`}>{i + 1}</span>
+                    <div className='flex w-full flex-col gap-x-3'>          
+                        <span className="text-slate-600 font-medium w-[90%] text-md text-justify">{answer.referenceAlternativeTitle ?? answer.title}</span>
+                        {answer.selectedAlternative === null ? <span className="mt-3 text-orange-600 text-justify">Não respondeu a tempo</span> : 
+                    !isCorrectAnswer ? <span className="text-gray-600 text-sm text-justify mt-3 mb-1">Sua resposta: {answer.alternatives[answer.selectedAlternative]}</span> : ''}
+                     <span className='text-gray-600 text-sm'>Resposta: {answer.alternatives[answer.correctAlternative]}</span>         
+                    </div>  
             </div>
         })
     }
@@ -64,7 +61,7 @@ export default function Result({ answers }: any) {
             </div>
            
         </div>
-         <Footer />
+
       </>
     )
 }
